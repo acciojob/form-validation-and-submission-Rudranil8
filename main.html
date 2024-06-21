@@ -9,10 +9,13 @@
 <body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
+		document.getElementById('terms').addEventListener('change', function() {
+    document.getElementById('submitBtn').disabled = !this.checked;
+});
 </script>
 
 </body>
-<form action="post">
+<form action="submit-form.php" method="post">
 	Name: <input name="name" type="text"><br>
 	<input type="checkbox" required>I accept the terms and conditions.<br>
 	<button type="submit">Submit</button>
